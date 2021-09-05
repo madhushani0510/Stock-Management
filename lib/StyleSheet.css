@@ -1,0 +1,15 @@
+
+
+ .jfx-text-field
+{
+-fx-text-inner-color: #ffffff !important;
+-fx-text-fill:#ffffff !important;
+    -jfx-focus-color: #ffffff !important;
+    -jfx-unfocus-color: #ffffff !important;
+}
+      
+ .jfx-password-field {
+    -fx-text-fill:#ffffff !important;
+    -jfx-focus-color: #ffffff !important;
+    -jfx-unfocus-color: #ffffff !important;
+}

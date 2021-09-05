@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootSoldView" prefHeight="570.0" prefWidth="1069.0" style="-fx-background-color: #1e1e2f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SoldViewController">
+   <children>
+      <Label alignment="CENTER" layoutX="7.0" layoutY="4.0" prefHeight="46.0" prefWidth="1057.0" style="-fx-background-color: #26293b;" text="Sold Stocks View" textFill="#bdb7b7">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblSoldView" layoutX="9.0" layoutY="80.0" prefHeight="468.0" prefWidth="1051.0">
+        <columns>
+          <TableColumn fx:id="colSoldID" prefWidth="89.0" text="Sold ID" />
+          <TableColumn fx:id="colSoldCIndex" prefWidth="138.0" text="Company Index" />
+            <TableColumn fx:id="colSoldQty" prefWidth="103.0" text="Qty" />
+            <TableColumn fx:id="colSoldPrice" prefWidth="116.0" text="Sold Price" />
+            <TableColumn fx:id="colSoldProfit" prefWidth="156.0" text=" Profit" />
+            <TableColumn fx:id="colSoldDate" prefWidth="137.0" text="Date" />
+            <TableColumn fx:id="colSoldTax" prefWidth="132.0" text="Tax" />
+            <TableColumn fx:id="coldSoldCost" prefWidth="177.0" text="Total Cost" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

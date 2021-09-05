@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootCompany" prefHeight="570.0" prefWidth="1040.0" style="-fx-background-color: #1e1e2f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DividendFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="7.0" layoutY="8.0" prefHeight="53.0" prefWidth="1020.0" style="-fx-background-color: #26293b;" text="Upcoming Dividends" textFill="#bdb7b7">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Pane layoutX="9.0" layoutY="74.0" prefHeight="286.0" prefWidth="1020.0" style="-fx-background-color: #26293b;">
+         <children>
+            <Label layoutX="38.0" layoutY="14.0" prefHeight="34.0" prefWidth="133.0" text="Company Index" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="120.0" prefHeight="34.0" prefWidth="133.0" text="Approval Date" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="180.0" prefHeight="34.0" prefWidth="87.0" text="XD Date" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="392.0" layoutY="7.0" prefHeight="34.0" prefWidth="125.0" text="Dividend ID" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="57.0" prefHeight="34.0" prefWidth="133.0" text="Stock Type" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbStockType" editable="true" layoutX="179.0" layoutY="59.0" prefHeight="31.0" prefWidth="125.0" style="-fx-background-color: #1e1e2f;" />
+            <Label layoutX="391.0" layoutY="58.0" prefHeight="34.0" prefWidth="133.0" text="Dividend Type" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbDividendType" editable="true" layoutX="531.0" layoutY="63.0" prefHeight="31.0" prefWidth="125.0" style="-fx-background-color: #1e1e2f;" />
+            <Label layoutX="386.0" layoutY="117.0" prefHeight="34.0" prefWidth="108.0" text="Payment Date" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="txtDApprovalDate" layoutX="179.0" layoutY="123.0" prefHeight="31.0" prefWidth="125.0" />
+            <DatePicker fx:id="txtDXDDate" layoutX="180.0" layoutY="183.0" prefHeight="31.0" prefWidth="125.0" />
+            <DatePicker fx:id="txtDPaymentDate" layoutX="528.0" layoutY="120.0" prefHeight="31.0" prefWidth="125.0" />
+            <JFXTextField fx:id="txtDividendCIndex" focusColor="#11467c" layoutX="179.0" layoutY="8.0" prefHeight="31.0" prefWidth="125.0" style="-fx-background-color: #f2f3f4;" />
+            <Pane layoutX="778.0" layoutY="10.0" prefHeight="253.0" prefWidth="221.0" style="-fx-background-color: #1e1e2f;">
+               <children>
+                  <JFXButton fx:id="btnDSave" layoutX="33.0" layoutY="11.0" onAction="#saveDOnAction" prefHeight="39.0" prefWidth="152.0" ripplerFill="#2b042f" style="-fx-background-color: #718093;" text="SAVE" textAlignment="CENTER" textFill="#00040a" textOverrun="CLIP">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="btnDUpdate" layoutX="34.0" layoutY="75.0" onAction="#updateDOnAction" prefHeight="39.0" prefWidth="152.0" ripplerFill="#2b042f" style="-fx-background-color: #718093;" text="UPDATE" textAlignment="CENTER" textFill="#00040a" textOverrun="CLIP">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="btnDDelete" layoutX="34.0" layoutY="136.0" onAction="#deleteDOnAction" prefHeight="39.0" prefWidth="152.0" ripplerFill="#2e0c04" style="-fx-background-color: #718093;" text="DELETE" textAlignment="CENTER" textFill="#b51809" textOverrun="CLIP">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="btnDClear" layoutX="34.0" layoutY="199.0" onAction="#clearDOnAction" prefHeight="39.0" prefWidth="152.0" ripplerFill="#2b042f" style="-fx-background-color: #718093;" text="CLEAR" textAlignment="CENTER" textFill="#00040a" textOverrun="CLIP">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+                     </effect>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Label fx:id="lblDividendID" layoutX="532.0" layoutY="9.0" prefHeight="31.0" prefWidth="125.0" style="-fx-background-color: #f2f3f4;" />
+         </children>
+      </Pane>
+      <TableView fx:id="tblDividend" layoutX="9.0" layoutY="369.0" onMouseClicked="#rawDOnClick" prefHeight="187.0" prefWidth="1012.0">
+        <columns>
+            <TableColumn fx:id="colDID" prefWidth="104.0" text="DID" />
+          <TableColumn fx:id="colDIndex" prefWidth="151.0" text="Company Index" />
+            <TableColumn fx:id="colDStockType" prefWidth="128.0" text="Stock Type" />
+            <TableColumn fx:id="colDType" prefWidth="122.0" text="Dividend Type" />
+            <TableColumn fx:id="colADate" prefWidth="148.0" text="Approval Date" />
+            <TableColumn fx:id="colXDDate" prefWidth="183.0" text="XD Date" />
+            <TableColumn fx:id="colDPaymentDate" prefWidth="158.0" text="Payment Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

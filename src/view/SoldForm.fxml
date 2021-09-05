@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootCompany" prefHeight="570.0" prefWidth="1069.0" style="-fx-background-color: #1e1e2f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SoldFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="7.0" layoutY="4.0" prefHeight="46.0" prefWidth="1057.0" style="-fx-background-color: #26293b;" text="Sold Stocks" textFill="#bdb7b7">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Pane layoutX="8.0" layoutY="60.0" prefHeight="313.0" prefWidth="1057.0" style="-fx-background-color: #26293b;">
+         <children>
+            <Label layoutX="404.0" layoutY="6.0" prefHeight="34.0" prefWidth="133.0" text="Company Name" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtSoldComName" layoutX="586.0" layoutY="8.0" prefHeight="31.0" prefWidth="422.0" style="-fx-background-color: #f4f5f8;" />
+            <Label layoutX="36.0" layoutY="109.0" prefHeight="31.0" prefWidth="133.0" text="Sold Quantity" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtSoldQty" layoutX="209.0" layoutY="108.0" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: #f4f5f8;" />
+            <Label layoutX="404.0" layoutY="107.0" prefHeight="34.0" prefWidth="162.0" text="Actual Profit Margin" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtSoldProfitMargin" layoutX="587.0" layoutY="106.0" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: #f4f5f8;" />
+            <Label layoutX="38.0" layoutY="155.0" prefHeight="34.0" prefWidth="162.0" text="Sold Price" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtSoldPrice" layoutX="209.0" layoutY="157.0" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: #f4f5f8;" />
+            <Label layoutX="406.0" layoutY="55.0" prefHeight="34.0" prefWidth="125.0" text="Date" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="5.0" prefHeight="34.0" prefWidth="133.0" text="Company Index" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtSoldCIndex" focusColor="#21409e" layoutX="209.0" layoutY="7.0" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: #f4f5f8;" />
+            <Label layoutX="38.0" layoutY="53.0" prefHeight="34.0" prefWidth="125.0" text="Sold ID" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSoldID" layoutX="209.0" layoutY="55.0" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #f4f5f8;" />
+            <DatePicker fx:id="txtSoldDate" layoutX="587.0" layoutY="54.0" prefHeight="31.0" prefWidth="133.0" />
+            <Pane layoutY="210.0" prefHeight="46.0" prefWidth="1057.0" style="-fx-background-color: #1e1e2f;">
+               <children>
+                  <JFXButton fx:id="btnSoldSave" layoutX="545.0" layoutY="6.0" onAction="#soldSaveOnAction" prefHeight="39.0" prefWidth="108.0" ripplerFill="#220802" style="-fx-background-color: #1e1e2f;" text="SAVE" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSoldDelete" layoutX="14.0" layoutY="6.0" onAction="#soldDeleteOnAction" prefHeight="23.0" prefWidth="108.0" ripplerFill="#220802" style="-fx-background-color: #1e1e2f;" text="DELETE" textAlignment="CENTER" textFill="#e82020" textOverrun="CLIP">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSoldUpdate" layoutX="375.0" layoutY="4.0" onAction="#soldUpdateOnAction" prefHeight="39.0" prefWidth="108.0" ripplerFill="#220802" style="-fx-background-color: #1e1e2f;" text="UPDATE" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="btnProfit" layoutX="716.0" layoutY="6.0" onAction="#soldProfitOnAction" prefHeight="39.0" prefWidth="108.0" ripplerFill="#220802" style="-fx-background-color: #1e1e2f;" text="PROFIT" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSoldSearch" layoutX="202.0" layoutY="6.0" onAction="#soldSearchOnAction" prefHeight="39.0" prefWidth="108.0" ripplerFill="#220802" style="-fx-background-color: #1e1e2f;" text="SEARCH" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSoldCost" layoutX="881.0" layoutY="8.0" onAction="#soldCostOnAction" prefHeight="39.0" prefWidth="155.0" ripplerFill="#220802" style="-fx-background-color: #1e1e2f;" text="SOLD INCOME " textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+                     </effect>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane layoutX="744.0" layoutY="61.0" prefHeight="128.0" prefWidth="266.0" style="-fx-background-color: #1e1e2f;">
+               <children>
+                  <Label layoutX="14.0" layoutY="22.0" prefHeight="34.0" prefWidth="125.0" text="Total Income" textFill="#e82020">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtSoldCost" focusColor="#e4e5e8" layoutX="140.0" layoutY="16.0" prefHeight="31.0" prefWidth="108.0" style="-fx-background-color: #ffffff;" unFocusColor="#1b0101" />
+                  <Label layoutX="6.0" layoutY="86.0" prefHeight="34.0" prefWidth="125.0" text="Actual  Profit" textFill="#22fc3b">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtSoldProfit" layoutX="140.0" layoutY="80.0" prefHeight="31.0" prefWidth="108.0" style="-fx-background-color: #ffffff;" unFocusColor="#1b0101" />
+               </children>
+            </Pane>
+            <Label layoutX="404.0" layoutY="155.0" prefHeight="34.0" prefWidth="142.0" text="Tax" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtSoldTax" layoutX="587.0" layoutY="157.0" prefHeight="31.0" prefWidth="133.0" style="-fx-background-color: #f4f5f8;" />
+            <Pane layoutX="-1.0" layoutY="262.0" prefHeight="46.0" prefWidth="1057.0" style="-fx-background-color: #1e1e2f;">
+               <children>
+                  <JFXButton fx:id="btnSReport" layoutX="772.0" layoutY="7.0" onAction="#soldReportOnAction" prefHeight="39.0" prefWidth="173.0" ripplerFill="#220802" style="-fx-background-color: #1e1e2f;" text="SOLD REPORT" textAlignment="CENTER" textFill="#e8e857" textOverrun="CLIP">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSoldClear" layoutX="113.0" layoutY="5.0" onAction="#soldClearOnAction" prefHeight="39.0" prefWidth="108.0" ripplerFill="#220802" style="-fx-background-color: #1e1e2f;" text="CLEAR" textFill="WHITE" textOverrun="CLIP">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="SoldView" layoutX="398.0" layoutY="7.0" onAction="#soldViewOnAction" prefHeight="39.0" prefWidth="198.0" ripplerFill="#220802" style="-fx-background-color: #1e1e2f;" text="VIEW SOLD STOCKS" textFill="WHITE" textOverrun="CLIP">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+                     </effect>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <TableView fx:id="tblSold" layoutX="9.0" layoutY="389.0" onMouseClicked="#rawSOnClicked" prefHeight="175.0" prefWidth="1051.0">
+        <columns>
+          <TableColumn fx:id="colBID" prefWidth="100.0" text="Bought ID" />
+          <TableColumn fx:id="colBCIndex" prefWidth="127.0" text="Company Index" />
+            <TableColumn fx:id="colBQty" prefWidth="77.0" text="Qty" />
+            <TableColumn fx:id="colBPrice" prefWidth="108.0" text="Unit Price" />
+            <TableColumn fx:id="colBDate" prefWidth="94.0" text="Date" />
+            <TableColumn fx:id="colBSPrice" prefWidth="129.0" text="Selling Price" />
+            <TableColumn fx:id="colBoughtTax" prefWidth="78.0" text="Tax" />
+            <TableColumn fx:id="coldBCost" prefWidth="141.0" text="Total Cost" />
+            <TableColumn prefWidth="204.0" text="Expected Profit" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

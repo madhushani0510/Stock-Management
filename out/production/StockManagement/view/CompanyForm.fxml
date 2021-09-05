@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootCompany" prefHeight="570.0" prefWidth="1040.0" style="-fx-background-color: #1e1e2f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompanyFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="7.0" layoutY="8.0" prefHeight="53.0" prefWidth="1020.0" style="-fx-background-color: #26293b;" text="Add Company Profile" textFill="#bdb7b7">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Pane layoutX="8.0" layoutY="74.0" prefHeight="162.0" prefWidth="1020.0" style="-fx-background-color: #26293b;">
+         <children>
+            <Label layoutX="38.0" layoutY="22.0" prefHeight="34.0" prefWidth="133.0" text="Company Index" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtIndex" layoutX="184.0" layoutY="28.0" prefHeight="26.0" prefWidth="459.0" stylesheets="@../asserts/StyleSheet.css" />
+            <Label layoutX="38.0" layoutY="89.0" prefHeight="34.0" prefWidth="133.0" text="Company Name" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCompanyName" layoutX="185.0" layoutY="92.0" prefHeight="26.0" prefWidth="459.0" stylesheets="@../asserts/StyleSheet.css" />
+            <Label layoutX="710.0" layoutY="19.0" prefHeight="34.0" prefWidth="133.0" text="Industrial Group" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="710.0" layoutY="93.0" prefHeight="34.0" prefWidth="125.0" text="Finantial Month" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbIGroup" editable="true" layoutX="841.0" layoutY="23.0" prefWidth="150.0" style="-fx-background-color: #1e1e2f;" />
+            <ComboBox fx:id="cmbFMonth" editable="true" layoutX="841.0" layoutY="97.0" prefWidth="150.0" style="-fx-background-color: #1e1e2f;" />
+         </children>
+      </Pane>
+      <Pane layoutX="7.0" layoutY="337.0" prefHeight="225.0" prefWidth="1020.0" style="-fx-background-color: #26293b;">
+         <children>
+            <TableView fx:id="tblCompany" layoutX="14.0" layoutY="13.0" onMouseClicked="#rawOnClick" prefHeight="200.0" prefWidth="1000.0">
+              <columns>
+                <TableColumn fx:id="colIndex" prefWidth="225.0" text="Company Index" />
+                <TableColumn fx:id="colName" prefWidth="212.0" text="Company Name" />
+                  <TableColumn fx:id="colGroup" prefWidth="301.0" text="Industry Group" />
+                  <TableColumn fx:id="colMonth" prefWidth="261.0" text="Financial Month" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane layoutX="7.0" layoutY="249.0" prefHeight="74.0" prefWidth="249.0" style="-fx-background-color: #26293b;">
+         <children>
+            <JFXButton fx:id="btnClear" layoutX="12.0" layoutY="18.0" onAction="#clearOnAction" prefHeight="34.0" prefWidth="212.0" ripplerFill="#2b042f" style="-fx-background-color: #718093;" text="CLEAR" textAlignment="CENTER" textFill="#00040a" textOverrun="CLIP">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+               </effect>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="265.0" layoutY="249.0" prefHeight="74.0" prefWidth="249.0" style="-fx-background-color: #26293b;">
+         <children>
+            <JFXButton fx:id="btnDelete" layoutX="12.0" layoutY="18.0" onAction="#deleteOnAction" prefHeight="34.0" prefWidth="212.0" ripplerFill="#2e0c04" style="-fx-background-color: #718093;" text="DELETE" textAlignment="CENTER" textFill="#b51809" textOverrun="CLIP">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+               </effect>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="523.0" layoutY="249.0" prefHeight="74.0" prefWidth="249.0" style="-fx-background-color: #26293b;">
+         <children>
+            <JFXButton fx:id="btnUpdate" layoutX="12.0" layoutY="18.0" onAction="#updateOnAction" prefHeight="34.0" prefWidth="212.0" ripplerFill="#2b042f" style="-fx-background-color: #718093;" text="UPDATE" textAlignment="CENTER" textFill="#00040a" textOverrun="CLIP">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+               </effect>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="779.0" layoutY="249.0" prefHeight="74.0" prefWidth="249.0" style="-fx-background-color: #26293b;">
+         <children>
+            <JFXButton fx:id="btnSave" layoutX="12.0" layoutY="18.0" onAction="#saveOnAction" prefHeight="34.0" prefWidth="212.0" ripplerFill="#2b042f" style="-fx-background-color: #718093;" text="SAVE" textAlignment="CENTER" textFill="#00040a" textOverrun="CLIP">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+               </effect>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

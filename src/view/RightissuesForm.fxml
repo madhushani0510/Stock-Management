@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootCompany" prefHeight="570.0" prefWidth="1040.0" style="-fx-background-color: #1e1e2f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RightissuesFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="7.0" layoutY="8.0" prefHeight="53.0" prefWidth="1020.0" style="-fx-background-color: #26293b;" text="Right Issues" textFill="#bdb7b7">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Pane layoutX="8.0" layoutY="74.0" prefHeight="277.0" prefWidth="1020.0" style="-fx-background-color: #26293b;">
+         <children>
+            <Label layoutX="38.0" layoutY="25.0" prefHeight="34.0" prefWidth="133.0" text="Company Index" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="145.0" prefHeight="34.0" prefWidth="173.0" text="Ex Right issue Date" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="80.0" prefHeight="34.0" prefWidth="125.0" text="Right Issue ID" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="208.0" prefHeight="34.0" prefWidth="133.0" text="Proportion" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtRProportion" layoutX="211.0" layoutY="208.0" prefHeight="31.0" prefWidth="125.0" style="-fx-background-color: #f8f3f3;" />
+            <JFXTextField fx:id="txtRComIndex" layoutX="211.0" layoutY="27.0" prefHeight="31.0" prefWidth="125.0" style="-fx-background-color: #f8f3f3;" />
+            <Label fx:id="lblRID" layoutX="211.0" layoutY="87.0" prefHeight="31.0" prefWidth="125.0" style="-fx-background-color: #f8f3f3;" textFill="#0d0000" />
+            <DatePicker fx:id="txtRDate" layoutX="209.0" layoutY="147.0" prefHeight="31.0" prefWidth="125.0" />
+            <JFXButton fx:id="btnRClearOnAction" layoutX="752.0" layoutY="142.0" onAction="#clearROnAction" prefHeight="34.0" prefWidth="212.0" ripplerFill="#2b042f" style="-fx-background-color: #718093;" text="CLEAR" textAlignment="CENTER" textFill="#00040a" textOverrun="CLIP">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnRSave" layoutX="752.0" layoutY="22.0" onAction="#saveROnAction" prefHeight="34.0" prefWidth="212.0" ripplerFill="#2b042f" style="-fx-background-color: #718093;" text="SAVE" textAlignment="CENTER" textFill="#00040a" textOverrun="CLIP">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnRUpdate" layoutX="752.0" layoutY="82.0" onAction="#updateROnAction" prefHeight="34.0" prefWidth="212.0" ripplerFill="#2b042f" style="-fx-background-color: #718093;" text="UPDATE" textAlignment="CENTER" textFill="#00040a" textOverrun="CLIP">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnRDelete" layoutX="752.0" layoutY="204.0" onAction="#deleteROnAction" prefHeight="34.0" prefWidth="212.0" ripplerFill="#2e0c04" style="-fx-background-color: #718093;" text="DELETE" textAlignment="CENTER" textFill="#b51809" textOverrun="CLIP">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow blurType="TWO_PASS_BOX" color="#af1111" />
+               </effect>
+            </JFXButton>
+         </children>
+      </Pane>
+      <TableView fx:id="tblRightissues" layoutX="13.0" layoutY="362.0" onMouseClicked="#rowROnClick" prefHeight="203.0" prefWidth="1012.0">
+        <columns>
+          <TableColumn fx:id="colRComIndex" prefWidth="242.0" text="Company Index" />
+          <TableColumn fx:id="colRID" prefWidth="274.0" text="RightIssue ID " />
+            <TableColumn fx:id="colExRDate" prefWidth="238.0" text="Ex Rightissue Date" />
+            <TableColumn fx:id="colRProportion" prefWidth="249.0" text="Proportion" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Sold" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="134754bc-87f5-4a4f-a312-69b2c9b4892a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sold.xml"/>
+	<queryString language="SQL">
+		<![CDATA[select * from sold]]>
+	</queryString>
+	<field name="SoldID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="SoldID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sold"/>
+	</field>
+	<field name="CIndex" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CIndex"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sold"/>
+	</field>
+	<field name="SoldQty" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="SoldQty"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sold"/>
+	</field>
+	<field name="SoldtPrice" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="SoldtPrice"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sold"/>
+	</field>
+	<field name="ActualProfitMargin" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ActualProfitMargin"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sold"/>
+	</field>
+	<field name="Date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="Date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sold"/>
+	</field>
+	<field name="SoldtTax" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="SoldtTax"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sold"/>
+	</field>
+	<group name="SoldID">
+		<groupExpression><![CDATA[$F{SoldID}]]></groupExpression>
+	</group>
+	<group name="CIndex">
+		<groupExpression><![CDATA[$F{CIndex}]]></groupExpression>
+	</group>
+	<group name="SoldQty">
+		<groupExpression><![CDATA[$F{SoldQty}]]></groupExpression>
+	</group>
+	<group name="SoldtPrice">
+		<groupExpression><![CDATA[$F{SoldtPrice}]]></groupExpression>
+	</group>
+	<group name="ActualProfitMargin">
+		<groupExpression><![CDATA[$F{ActualProfitMargin}]]></groupExpression>
+	</group>
+	<group name="Date">
+		<groupExpression><![CDATA[$F{Date}]]></groupExpression>
+	</group>
+	<group name="SoldtTax">
+		<groupExpression><![CDATA[$F{SoldtTax}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="-20" y="0" width="595" height="30" uuid="aadec548-a23d-4667-b2d8-d0fdfcbe0342"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SOLD STOCK REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="9" y="0" width="50" height="20" uuid="868e2dfb-f236-41d7-9b1f-a497a6bee709">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a2f32684-599e-4e9e-afcb-6fc119a0eb3a"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SoldID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="0" width="59" height="20" uuid="2ca65403-1e98-4989-a709-2cb71ad20a87">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1080a4b4-95a9-4ae6-a6d5-8be2de41fc23"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CIndex]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="0" width="60" height="20" uuid="52da628c-6f30-4dab-8527-abaeccc59bbf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="251f9645-afd7-49cf-a346-9a074c6d9f40"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SoldQty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="0" width="71" height="20" uuid="e55df6ac-e300-42b7-bde8-b6f5d8b983bf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="68d916e7-3ae4-4b50-8449-8c9f0644e707"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SoldtPrice]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="0" width="107" height="20" uuid="ffe6f715-011f-40e6-adac-84920f9f05c2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="81e63e7a-72ab-472f-8340-ea110dbf1a84"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ActualProfitMargin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="493" y="0" width="53" height="20" uuid="d2857898-e22f-44dc-9d33-381b352d7924">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="51add66f-ee60-4505-9659-5112d3f51b44"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="0" width="69" height="20" uuid="3a0f9a19-4dba-446f-9eb8-57b918cdd726">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e1d3aa72-54ef-4584-a094-5939567a5363"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SoldtTax]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="9" y="0" width="50" height="20" uuid="df61ce68-0960-4f17-a46e-050a50c81362">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a2f32684-599e-4e9e-afcb-6fc119a0eb3a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{SoldID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="0" width="59" height="20" uuid="46d06ab3-6933-46ee-a43d-6b74772dad72">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1080a4b4-95a9-4ae6-a6d5-8be2de41fc23"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CIndex}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="0" width="60" height="20" uuid="da8efd15-b60e-454b-8d6b-282acfb738bb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="251f9645-afd7-49cf-a346-9a074c6d9f40"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{SoldQty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="0" width="71" height="20" uuid="44ffd269-af56-4299-89cb-ea3fc5c15942">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="68d916e7-3ae4-4b50-8449-8c9f0644e707"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{SoldtPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="0" width="107" height="20" uuid="312b653d-b034-4f78-847f-5f799482c4a0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="81e63e7a-72ab-472f-8340-ea110dbf1a84"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{ActualProfitMargin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="493" y="0" width="53" height="20" uuid="5a153b56-4302-4ff4-8df6-521cae00e4ee">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="51add66f-ee60-4505-9659-5112d3f51b44"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="404" y="0" width="69" height="20" uuid="4abdfea7-d1dc-495d-80d0-a550c9bb2691">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e1d3aa72-54ef-4584-a094-5939567a5363"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{SoldtTax}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="69" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="40" width="90" height="14" uuid="a73a441d-a157-48d6-ab5d-8bbc7cd1ceff"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="91" y="40" width="100" height="14" uuid="9e369c50-a386-42c0-a32e-9c94bba08505"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

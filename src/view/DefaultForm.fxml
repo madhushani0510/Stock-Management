@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootDefault" prefHeight="570.0" prefWidth="1040.0" style="-fx-background-color: #1e1e2f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DefaultFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="5.0" layoutY="8.0" prefHeight="49.0" prefWidth="1025.0" style="-fx-background-color: #26293b;" text="Dashboard" textAlignment="CENTER" textFill="#f2eaea">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Pane layoutX="56.0" layoutY="109.0" prefHeight="141.0" prefWidth="276.0" style="-fx-background-color: #26293b;">
+         <children>
+            <Label layoutX="85.0" layoutY="21.0" prefHeight="34.0" prefWidth="87.0" text="PROFIT" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtDefaultProfit" layoutX="45.0" layoutY="65.0" prefHeight="42.0" prefWidth="146.0" style="-fx-background-color: #f4eeee;" />
+         </children>
+      </Pane>
+      <Pane layoutX="386.0" layoutY="109.0" prefHeight="141.0" prefWidth="276.0" style="-fx-background-color: #26293b;">
+         <children>
+            <Label layoutX="110.0" layoutY="14.0" prefHeight="34.0" prefWidth="87.0" text="LOSS" textFill="#d34b4b">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtDefaultLoss" layoutX="70.0" layoutY="66.0" prefHeight="42.0" prefWidth="146.0" style="-fx-background-color: #f4eeee;" />
+         </children>
+      </Pane>
+      <Pane layoutX="711.0" layoutY="109.0" prefHeight="141.0" prefWidth="276.0" style="-fx-background-color: #26293b;">
+         <children>
+            <Label layoutX="35.0" layoutY="9.0" prefHeight="34.0" prefWidth="210.0" text="TOTAL INVESTMENT" textFill="#d5cdcd">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtInvestment" layoutX="76.0" layoutY="64.0" prefHeight="42.0" prefWidth="146.0" style="-fx-background-color: #f4eeee;" />
+         </children>
+      </Pane>
+      <Hyperlink fx:id="hyperCSEDaily" layoutX="582.0" layoutY="421.0" onAction="#cseDailyOnAction" prefHeight="42.0" prefWidth="354.0" style="-fx-background-color: #26293b;" text="     Colombo Stock Exchange Daily Reports" textFill="WHITE" />
+      <Hyperlink fx:id="hyperCSEWeekly" layoutX="94.0" layoutY="320.0" onAction="#cseWeeklyOnAction" prefHeight="42.0" prefWidth="354.0" style="-fx-background-color: #26293b;" text="   Colombo Stock Exchange Weekly Reports" textFill="WHITE" />
+      <Hyperlink fx:id="hyperCSEMonthly" layoutX="585.0" layoutY="320.0" onAction="#cseMonthlyOnAction" prefHeight="42.0" prefWidth="354.0" style="-fx-background-color: #26293b;" text="   Colombo Stock Exchange Monthly Reports" textFill="WHITE" />
+      <Hyperlink fx:id="hyperFGE" layoutX="94.0" layoutY="421.0" onAction="#fGEOnAction" prefHeight="42.0" prefWidth="354.0" style="-fx-background-color: #26293b;" text="  First Guardian Equities Online Trading Platform" textFill="WHITE" />
+   </children>
+</AnchorPane>
